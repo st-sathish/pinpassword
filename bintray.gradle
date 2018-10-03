@@ -1,0 +1,17 @@
+ext {
+    bintrayRepo = 'PinPassword' // your repo name
+    bintrayName = 'pin-password' // has to be same as your library module name
+    publishedGroupId = 'com.sathish.pinpassword' // your module package name
+    libraryName = 'pin-password'
+    artifact = 'pin-password' // has to be same as your library module name
+    libraryDescription = 'Library to use PIN as password'
+    siteUrl = 'https://github.com/st-sathish/pinpassword'
+    gitUrl = 'https://github.com/st-sathish/pinpassword.git'
+    libraryVersion = '1.0'
+    developerId = 'Sathish'
+    developerName = 'Sathish'
+    developerEmail = 'sathish.2009btech@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
