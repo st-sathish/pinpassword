@@ -1,5 +1,22 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
 
 android {
     compileSdkVersion 28
@@ -32,6 +49,24 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+ext {
+    bintrayRepo = 'PinPassword' // your repo name
+    bintrayName = 'pin-password' // has to be same as your library module name
+    publishedGroupId = 'com.sathish.pinpassword' // your module package name
+    libraryName = 'pin-password'
+    artifact = 'pin-password' // has to be same as your library module name
+    libraryDescription = 'This library supposed to use digit as password like PIN'
+    siteUrl = 'https://github.com/st-sathish/pinpassword'
+    gitUrl = 'https://github.com/st-sathish/pinpassword.git'
+    libraryVersion = '1.0'
+    developerId = 'Sathish'
+    developerName = 'Sathish'
+    developerEmail = 'sathish.2009btech@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
 }
 
 apply from: '../bintray.gradle'
